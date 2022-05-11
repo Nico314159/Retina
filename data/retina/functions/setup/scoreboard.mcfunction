@@ -7,6 +7,7 @@ scoreboard objectives add retina dummy {"text": "retina", "color": "gold"}
 scoreboard objectives add retina.id dummy {"text": "retina entity IDs", "color": "gold"}
 scoreboard objectives add retina.show_particle dummy 
 scoreboard objectives add retina.show_line dummy 
+scoreboard objectives add retina.ignore_list dummy 
 
 scoreboard players set $5 retina 5
 scoreboard players set $10 retina 10
