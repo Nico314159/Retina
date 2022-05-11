@@ -7,7 +7,6 @@ scoreboard objectives add retina dummy {"text": "retina", "color": "gold"}
 scoreboard objectives add retina.id dummy {"text": "retina entity IDs", "color": "gold"}
 scoreboard objectives add retina.show_particle dummy 
 scoreboard objectives add retina.show_line dummy 
-scoreboard objectives add retina.ignore_list dummy 
 
 scoreboard players set $5 retina 5
 scoreboard players set $10 retina 10
@@ -24,3 +23,11 @@ scoreboard players set $spread_enabled_local retina 1
 scoreboard players set $spread_enabled_global retina 1
 scoreboard players set $spread_min retina 10
 scoreboard players set $spread_max retina 10
+
+scoreboard players set $ignore_glass_panes retina 0
+scoreboard players set $ignore_leaves retina 0
+scoreboard players set $ignore_liquids retina 0
+scoreboard players set $ignore_scaffolding retina 0
+scoreboard players set $ignore_fire retina 0
+scoreboard players set $ignore_barriers retina 0
+scoreboard players set $ignore_passables retina 0
