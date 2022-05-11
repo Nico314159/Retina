@@ -118,15 +118,6 @@ Only exists if `Target` is `"BLOCK"` or `"ENTITY"`.
 
 To add Retina to your data pack, copy the `retina` namespace folder to your own data pack folder. Also copy the `minecraft` namespace folder or, if your pack uses the `#minecraft:load` function tag, make sure to include `retina:setup/load`.
 
-## Crediting
-
-Crediting is not required, but if you wish to credit me and Aeldrion nonetheless, you can do so with the following notice wherever you please:
-
-> Uses Retina by Nicoder (based off Iris and Random by Aeldrion) \
-> https://github.com/Nico314159/Retina \
-> https://github.com/Aeldrion/Iris \
-> https://twitter.com/Aeldrion
-
 ## Publishing modified versions of Retina
 
 You are free to redistribute Retina or modified versions of Retina as a part of your own data packs. The latter can be useful, for example, if you want to detect where one specific block is being placed and want to avoid running unnecessary commands when raycasting. However, since multiple data packs might be using Iris and/or Retina on the same world, it is recommended to distribute modified versions of either pack with a modified namespace as well (e.g. `retina_mypack`) to avoid conflicts with other data packs. You can do so by replacing all occurrences of `retina:` with `retina_mypack:` in the data pack using a code editor's "Replace in folder" feature for example, then renaming the `retina` namespace folder to `retina_mypack`.
