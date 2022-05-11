@@ -1,0 +1,1 @@
+execute at @s run function retina:raycast/on_block_found
