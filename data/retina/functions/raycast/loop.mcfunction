@@ -7,7 +7,7 @@
 # @within retina:raycast/loop
 
 # See if there is a non transparent block or an entity at the current position
-execute at @s unless block ~ ~ ~ #retina:air run function retina:raycast/on_block_found
+execute at @s unless block ~ ~ ~ #retina:air run function retina:raycast/ignore_protocols
 execute at @s if data storage retina:input {TargetEntities: true} if entity @e[type=!#retina:ignore, tag=!retina.executing, dx=0, dy=0, dz=0] run function retina:raycast/on_entity_found
 
 # If the ray hit something, break the loop and return relevant information

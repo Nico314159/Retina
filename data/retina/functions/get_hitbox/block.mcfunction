@@ -157,7 +157,6 @@ execute if score $block.is_wall retina matches 1 run function retina:get_hitbox/
 execute if score $block_found retina matches 0 store success score $block_found retina store success score $block.is_wall_sign retina if block ~ ~ ~ #minecraft:wall_signs
 execute if score $block.is_wall_sign retina matches 1 run function retina:get_hitbox/block/wall_signs
 
-
 # Wall torches, redstone torches, soul torches
 execute if score $block_found retina matches 0 store success score $block_found retina store success score $block.is_wall_torch retina if block ~ ~ ~ #retina:wall_torches
 execute if score $block.is_wall_torch retina matches 1 run function retina:get_hitbox/block/wall_torches
