@@ -30,5 +30,6 @@ scoreboard players set $ignore_liquids retina 0
 scoreboard players set $ignore_scaffolding retina 0
 scoreboard players set $ignore_fire retina 0
 scoreboard players set $ignore_barriers retina 0
+scoreboard players set $ignore_intangible retina 0
 scoreboard players set $ignore_passable retina 0
 scoreboard players set $ignore_climable retina 0
