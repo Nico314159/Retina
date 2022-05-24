@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 8,
-		"description": "In development - A utility data pack to assist with precise, customized raycasts"
+		"pack_format": 9,
+		"description": "(WIP) A utility DP to assist with precise, customized raycasts."
 	}
 }
