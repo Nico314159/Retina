@@ -1,5 +1,6 @@
 scoreboard players set $ignore_this retina 0
 execute if block ~ ~ ~ #retina:iron_bars_and_glass_panes run scoreboard players operation $ignore_this retina += $ignore_glass_panes retina
+execute if block ~ ~ ~ #retina:glass_blocks run scoreboard players operation $ignore_this retina += $ignore_glass_blocks retina
 execute if block ~ ~ ~ #minecraft:leaves run scoreboard players operation $ignore_this retina += $ignore_leaves retina
 execute if block ~ ~ ~ #retina:liquids run scoreboard players operation $ignore_this retina += $ignore_liquids retina
 execute if block ~ ~ ~ minecraft:scaffolding run scoreboard players operation $ignore_this retina += $ignore_scaffolding retina
