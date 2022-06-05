@@ -33,4 +33,4 @@ execute unless score $ignore_fire retina = $ignore_fire retina run scoreboard pl
 execute unless score $ignore_barriers retina = $ignore_barriers retina run scoreboard players set $ignore_barriers retina 0
 execute unless score $ignore_intangible retina = $ignore_intangible retina run scoreboard players set $ignore_intangible retina 0
 execute unless score $ignore_passable retina = $ignore_passable retina run scoreboard players set $ignore_passable retina 0
-execute unless score $ignore_climable retina = $ignore_climable retina run scoreboard players set $ignore_climable retina 0
+execute unless score $ignore_climbable retina = $ignore_climbable retina run scoreboard players set $ignore_climbable retina 0
