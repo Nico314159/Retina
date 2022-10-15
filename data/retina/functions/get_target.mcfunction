@@ -1,7 +1,7 @@
 #> retina:get_target
 #
 # Returns the position of the block targeted
-# To tell where a player is looking, anchoring to the eye position is needed: execute as <player> at @s anchored eyes positioned ^ ^ ^ run function retina:get_target_block
+# To tell where a player is looking, anchoring to the eye position is needed: execute as <player> at @s anchored eyes positioned ^ ^ ^ run function retina:get_target
 #
 # @public
 # @context a position and a rotation
