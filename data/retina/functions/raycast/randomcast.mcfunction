@@ -7,10 +7,10 @@ execute as @e[type=marker,limit=1,tag=retina.rotate] store result entity @s Rota
 scoreboard players operation $min random = $spread_min retina
 scoreboard players operation $max random = $spread_max retina 
 
-execute if score $spread_enabled_local retina matches 1 run function random:uniform
-execute if score $spread_enabled_local retina matches 1 run scoreboard players operation $random_offset_h retina = $out random
-execute if score $spread_enabled_local retina matches 1 run function random:uniform
-execute if score $spread_enabled_local retina matches 1 run scoreboard players operation $random_offset_v retina = $out random
+function random:uniform
+scoreboard players operation $random_offset_h retina = $out random
+function random:uniform
+scoreboard players operation $random_offset_v retina = $out random
 
 execute store result score $horizontal_temp_rotation retina run data get entity @e[type=marker,tag=retina.rotate,limit=1] Rotation[0] 10
 execute store result score $spread_sign_h retina if predicate random:coin_toss
