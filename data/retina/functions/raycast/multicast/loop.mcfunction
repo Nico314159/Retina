@@ -1,9 +1,6 @@
 tag @s add retina.reference_player
 execute positioned ^ ^ ^ anchored eyes run summon marker ^ ^ ^ {Tags:["retina.multicast","retina.rotate"]}
-#execute as @e[type=marker,limit=1,tag=retina.rotate] run tp @s ^ ^ ^ facing entity @a[tag=retina.reference_player,sort=nearest,limit=1]
-#execute as @e[type=marker,limit=1,tag=retina.rotate] store result entity @s Rotation[0] float 0.01 run data get entity @a[tag=retina.reference_player,sort=nearest,limit=1] Rotation[0] 100
-#execute as @e[type=marker,limit=1,tag=retina.rotate] store result entity @s Rotation[1] float 0.01 run data get entity @a[tag=retina.reference_player,sort=nearest,limit=1] Rotation[1] 100
-tp @e[type=marker,limit=1,tag=retina.rotate] @s
+data modify entity @e[type=marker,limit=1,tag=retina.rotate] Rotation set from entity @s Rotation
 
 scoreboard players set $random_offset_h retina 10
 scoreboard players set $random_offset_v retina 10
