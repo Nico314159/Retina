@@ -1,3 +1,21 @@
+#> retina:raycast/multicast/center
+#
+# Runs additonal raycasts centered on the crosshair after the multicast loop finishes.
+#
+# @context a position and a rotation
+# @within retina:raycast/multicast/loop
+# @input
+#   score $center_count retina
+#       The number of additional raycasts to run without offset. 
+# @reads
+#   score @p[tag=retina.reference_player] retina.show_particle
+#		Whether the raycast should show a particle at the endpoint
+#   score @p[tag=retina.reference_player] retina.show_line
+#		Whether the raycast should draw a continuous line of particles from start to finish
+# @writes
+#   score $center_index retina
+#       Index number for centered raycasts. Loop terminates when maximum value is reached
+
 tag @s add retina.reference_player
 execute positioned ^ ^ ^ anchored eyes run summon marker ^ ^ ^ {Tags:["retina.multicast","retina.rotate"]}
 #execute as @e[type=marker,limit=1,tag=retina.rotate] run tp @s ^ ^ ^ facing entity @a[tag=retina.reference_player,sort=nearest,limit=1]

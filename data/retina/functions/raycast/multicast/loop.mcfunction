@@ -1,3 +1,54 @@
+#> retina:raycast/multicast/loop
+#
+# Runs a grid of raycasts that originate where the executor is looking and expand outwards in a rectangular formation
+#
+# @context a position and a rotation
+# @within retina:raycast/multicast/main
+# @within retina:raycast/multicast/loop
+# @input
+#   score $offset retina
+#       The usual number of degrees of offset in between each raycast
+#	score $spread_enabled_local retina
+#		Whether this grid of raycasts should use random spread amplification
+#   score $spread_enabled_global retina
+#		Whether random spread amplification is even allowed for multi-raycasts. Intended exlcusively for Minecraft TF2; other datapack developers should not worry about this value.
+#   score $spread_min retina
+#       Minimum *multiplier* for $offset (10:1 scale). Only active if $spread_enabled_local and $spread_enabled_global both equal 1
+#   score $spread_max retina
+#       Maximum *multiplier* for $offset (10:1 scale). Only active if $spread_enabled_local and $spread_enabled_global both equal 1
+#   score $horizontal_count retina
+#		The number of raycasts with rotational offset on the horizontal axis. 
+#   score $vertical_count retina
+#		The number of raycasts with rotational offset on the vertical axis. 
+#   score $center_count retina
+#       The number of additional raycasts to run without offset. 
+#   score $horizontal_index retina
+#		Horizontal position of this raycast in the grid. 0 is leftmost, $horizontal_count - 1 is rightmost
+#   score $vertical_index retina
+#		Vertical position of this raycast in the grid. 0 is bottommost, $vertical_count - 1 is topmost
+# @reads
+#   score $out random
+#       An integer in the range [$spread_min, $spread_max], given by the function random:uniform
+# @writes
+#   score $center_comp_h retina
+#		Number of degrees needed to center-compensate horizontally
+#   score $center_comp_v retina
+#		Number of degrees needed to center-compensate vertically
+#   score $horizontal_index_offset retina
+#		Total number of degrees to rotate the executing marker horizontally
+#   score $vertical_index_offset retina
+#		Total number of degrees to rotate the executing marker vertically
+#   score $horizontal_temp_rotation retina
+#       Stores horizontal rotation of the executing marker. Incremented by the value of $horizontal_index_offset 
+#   score $vertical_temp_rotation retina
+#       Stores vertical rotation of the executing marker. Plus/minused by the value of $vertical_index_offset
+#   score $horizontal_index retina
+#		See line 23. Incremented by 1 every loop. Rolls over once rightmost index is reached.
+#   score $vertical_index retina
+#		See line 25. Incremented by 1 when $horizontal_index rolls over. When topmost index is reached, loop terminates.
+#   score $center_index retina
+#       Index number for centered raycasts. Used by retina:raycast/multicast/center
+
 tag @s add retina.reference_player
 execute positioned ^ ^ ^ anchored eyes run summon marker ^ ^ ^ {Tags:["retina.multicast","retina.rotate"]}
 data modify entity @e[type=marker,limit=1,tag=retina.rotate] Rotation set from entity @s Rotation

@@ -1,3 +1,11 @@
+#> retina:raycast/ignore_protocols
+#
+# Checks if the block hit by the raycast is in the list of blocks to ignore. 
+#
+# @context a marker and the current ray position
+# @within retina:raycast/loop
+
+
 scoreboard players set $ignore_this retina 0
 execute if block ~ ~ ~ #retina:iron_bars_and_glass_panes run scoreboard players operation $ignore_this retina += $ignore_glass_panes retina
 execute if block ~ ~ ~ #retina:glass_blocks run scoreboard players operation $ignore_this retina += $ignore_glass_blocks retina
