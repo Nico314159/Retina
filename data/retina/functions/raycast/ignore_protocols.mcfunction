@@ -4,6 +4,30 @@
 #
 # @context a marker and the current ray position
 # @within retina:raycast/loop
+# @input
+#   score $ignore_glass_panes retina
+#       Whether the ray can pass through glass panes (any color) and iron bars.
+#   score $ignore_glass_blocks retina
+#       Whether the ray can pass through glass blocks (including the 1.17 tinted glass)
+#   score $ignore_leaves retina
+#       Whether the ray can pass through leaves. Only applies to overworld leaves, not crimson/warped wart blocks 
+#   score $ignore_liquids retina
+#       Whether the ray can pass through water and lava.
+#   score $ignore_scaffolding retina
+#       Whether the ray can pass through... scaffolding.
+#   score $ignore_fire retina
+#       Whether the ray can pass through fire and soul fire.
+#   score $ignore_barriers retina
+#       Whether the ray can pass through barrier blocks. Does not apply to other unbreakable blocks like bedrock.
+#   score $ignore_intangible retina
+#       Whether the ray can pass through light level blocks and the structure void
+#   score $ignore_climbable retina
+#       Whether the ray can pass through climbable blocks (which in vanilla includes ladders, scaffolding and all vine types)
+#   score $ignore_passable retina
+#       Whether the ray can pass through blocks that players can walk through, such as flowers or crops
+# @output
+#   score $ignore_this retina
+#       Whether the current block should be ignored according to the above settings. 1 (or higher) = yes, 0 = no
 
 
 scoreboard players set $ignore_this retina 0

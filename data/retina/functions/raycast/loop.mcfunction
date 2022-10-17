@@ -5,6 +5,11 @@
 # @context a marker and the current ray position
 # @within retina:get_target
 # @within retina:raycast/loop
+# @reads
+#	storage retina:input
+#		TargetEntities: byte
+#			Whether or not to look for entities. Defaults to false.
+
 
 # See if there is a non transparent block or an entity at the current position
 execute at @s unless block ~ ~ ~ #retina:air run function retina:raycast/ignore_protocols
