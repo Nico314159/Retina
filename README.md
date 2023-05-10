@@ -40,7 +40,7 @@ Randomization: \
 
 Visuals: (applies to all raycasts done by the *entity*) \
 `<executing entity> retina.show_particle`: Enables/disables showing a particle at the *endpoint* of the raycast. \
-`<executing entity> retina.show_particle`: Enables/disables showing a line of particles along the *path* of the raycast. 
+`<executing entity> retina.show_line`: Enables/disables showing a line of particles along the *path* of the raycast. 
 
 ### Display particle
 
