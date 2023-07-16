@@ -1,4 +1,6 @@
-# Retina Raycasting
+# This project is deprecated, please use [Retina v2](https://github.com/Nico314159/Retina_v2) instead.
+
+## Retina Raycasting
 
 **Retina** is a fork of Aeldrion's original [Iris](https://github.com/Aeldrion/Iris) raycasting data pack for Minecraft: Java Edition 1.18+ with additional front-end (ironic because in an actual eye, the iris is in front of the retina) features for other datapacks to use, including raycasts with particle lines, randomly offset raycasts, and multi-raycasting. In the future, I also plan on adding togglable ignores for certain blocks and the ability to differentiate head vs body.
 
