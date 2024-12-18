@@ -21,6 +21,7 @@ SPECIAL_ENTITIES = [
     "minecraft:phantom",
     "minecraft:pufferfish",
     "minecraft:slime",
+    "minecraft:player"
 ]
 
 # Blocks locked behind experimental features; only needs to contain blocks that are unique in their own shape groups
