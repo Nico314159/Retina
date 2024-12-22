@@ -6,7 +6,6 @@
 #
 # @context a marker
 # @within iris:get_target
-# @within iris:get_hitbox/entity
 # @writes
 #    score $[x] iris
 #        The integer x coordinate of the current position
